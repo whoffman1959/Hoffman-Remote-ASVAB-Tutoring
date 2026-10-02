@@ -1,0 +1,1220 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================================
+   HEADER & NAVIGATION
+   ========================================================= */
+
+.top-bar {
+  background-color: #1a1c2e;
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.top-bar-info {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav {
+  background-color: #0f101d;
+  padding: 16px 0;
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+  position: relative;
+  background-image: url('asvab-class.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(18, 14, 46, 0.75) 0%,
+    rgba(18, 14, 46, 0.85) 100%
+  );
+
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #e2e8f0;
+}
+
+/* =========================================================
+   STATS BAR
+   ========================================================= */
+
+.stats-bar {
+  background-color: #ffffff;
+  padding: 40px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 20px;
+}
+
+.stat-item {
+  position: relative;
+  padding: 0 10px;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+
+  right: 0;
+  top: 15%;
+
+  height: 70%;
+  width: 1px;
+
+  background-color: #d1d5db;
+}
+
+.stat-item h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #120e2e;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   WHY US
+   ========================================================= */
+
+.why-us {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.why-us-header .subheading {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.why-us-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  color: #120e2e;
+  font-weight: 700;
+}
+
+.why-us-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.solutions-section {
+  background-color: #120e2e;
+  color: #ffffff;
+  padding: 90px 0;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.solutions-info .subheading {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a5b4fc;
+}
+
+.solutions-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.solutions-info p {
+  color: #d1d5db;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.btn-book {
+  display: inline-block;
+
+  background-color: #ffffff;
+  color: #120e2e;
+
+  padding: 14px 28px;
+  border-radius: 4px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-book:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333333;
+
+  padding: 30px;
+  border-radius: 6px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: #120e2e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MEET THE OWNER
+   ========================================================= */
+
+.meet-owner {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.meet-owner .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  text-align: center;
+  color: #120e2e;
+  margin-bottom: 50px;
+}
+
+.owner-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.owner-card {
+  position: relative;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.owner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.owner-card:hover .owner-img {
+  transform: scale(1.06);
+}
+
+.owner-badge {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgba(18, 14, 46, 0.95) 0%,
+    rgba(18, 14, 46, 0) 100%
+  );
+
+  padding: 40px 20px 20px;
+  color: #ffffff;
+
+  transition: opacity 0.4s ease;
+}
+
+.owner-card:hover .owner-badge {
+  opacity: 0.35;
+}
+
+.owner-badge h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.owner-badge p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.owner-bio {
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.owner-bio p {
+  margin-bottom: 20px;
+}
+
+.owner-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+.testimonials-section {
+  background-color: #120e2e;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.testimonials-content .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  margin-bottom: 5px;
+}
+
+.testimonials-content .subtitle {
+  color: #a5b4fc;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  max-height: 600px;
+  overflow-y: auto;
+
+  padding-right: 15px;
+}
+
+.testimonial-cards::-webkit-scrollbar {
+  width: 6px;
+}
+
+.testimonial-cards::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.05);
+
+  border-left: 3px solid #a5b4fc;
+  border-radius: 0 6px 6px 0;
+
+  padding: 20px;
+}
+
+.testimonial-card .quote {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.testimonial-card .author {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.testimonials-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphic-img {
+  width: 100%;
+  max-width: 450px;
+
+  border-radius: 8px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-details-section {
+  background: #ffffff;
+  color: #333333;
+
+  padding: 60px 0;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.contact-container-box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.contact-heading .subheading {
+  display: block;
+  margin-bottom: 8px;
+
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.contact-details-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  color: #120e2e;
+
+  margin-bottom: 12px;
+
+  text-align: center;
+}
+
+.contact-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.5fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.contact-info-card,
+.contact-form {
+  background: #f9fafb;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  padding: 32px;
+}
+
+.contact-info-card h3 {
+  font-size: 1.05rem;
+  color: #120e2e;
+  margin-bottom: 6px;
+}
+
+.contact-reference {
+  font-size: 1.05rem;
+  color: #333333;
+  font-weight: 400;
+
+  overflow-wrap: anywhere;
+}
+
+.contact-info-card .contact-reference {
+  margin-bottom: 24px;
+}
+
+.contact-info-card .contact-reference:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.contact-form label {
+  color: #120e2e;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form label span {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+
+  font: inherit;
+  color: #333333;
+
+  background-color: #ffffff;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+
+  padding: 12px 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+
+  border-color: #120e2e;
+
+  box-shadow: 0 0 0 3px rgba(18, 14, 46, 0.12);
+}
+
+.contact-submit {
+  display: inline-block;
+
+  border: 0;
+  border-radius: 4px;
+
+  background-color: #120e2e;
+  color: #ffffff;
+
+  padding: 14px 28px;
+
+  font: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+  background-color: #1a1640;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 12px rgba(18, 14, 46, 0.2);
+}
+
+.contact-submit:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 3px;
+}
+
+.form-note {
+  margin-top: 12px;
+
+  color: #6b7280;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/*
+  This is the Netlify honeypot field.
+  Real visitors never see it.
+*/
+.hidden-field {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  height: 1px;
+  width: 1px;
+
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  background-color: #0b081d;
+  color: #9ca3af;
+
+  text-align: center;
+
+  padding: 25px 0;
+
+  font-size: 0.85rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   SMALL LAPTOP / TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 992px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Navigation */
+
+  .main-nav .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 65vh;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  /* Why Us */
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .why-us-header h2 br {
+    display: none;
+  }
+
+  /* Services */
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  /* Owner */
+
+  .owner-grid {
+    grid-template-columns: 300px 1fr;
+    gap: 35px;
+  }
+
+  /* Testimonials */
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .testimonials-graphic {
+    order: -1;
+  }
+
+  .graphic-img {
+    max-width: 380px;
+  }
+
+  .testimonial-cards {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .why-us,
+  .meet-owner,
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .solutions-section {
+    padding: 65px 0;
+  }
+
+  /* Top bar */
+
+  .top-bar-info {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    text-align: center;
+  }
+
+  /* Logo */
+
+  .logo {
+    text-align: center;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 55vh;
+    background-position: center center;
+  }
+
+  .hero-content {
+    padding: 50px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  /* Stats */
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 0;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .stat-item h2 {
+    font-size: 2.35rem;
+  }
+
+  /* Why Us */
+
+  .why-us-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Headings */
+
+  .why-us-header h2,
+  .solutions-info h2,
+  .meet-owner .section-title,
+  .testimonials-content .section-title {
+    font-size: 2.25rem;
+  }
+
+  /* Owner */
+
+  .owner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-card {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* Contact */
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-card,
+  .contact-form {
+    padding: 28px;
+  }
+}
+
+/* ---------------------------------------------------------
+   MOBILE PHONE
+   --------------------------------------------------------- */
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Top bar */
+
+  .top-bar-info {
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.82rem;
+  }
+
+  /* Navigation */
+
+  .main-nav {
+    padding: 14px 0;
+  }
+
+  .main-nav .container {
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 8px 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 50vh;
+  }
+
+  .hero-content {
+    padding: 40px 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.18;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Stats */
+
+  .stats-bar {
+    padding: 32px 0;
+  }
+
+  .stats-grid {
+    gap: 25px 0;
+  }
+
+  .stat-item {
+    padding: 0 8px;
+  }
+
+  .stat-item h2 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 0.78rem;
+  }
+
+  /* Headings */
+
+  .why-us-header h2,
+  .solutions-info h2,
+  .meet-owner .section-title,
+  .testimonials-content .section-title,
+  .contact-details-section h2 {
+    font-size: 1.9rem;
+  }
+
+  /* Services */
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 25px 22px;
+  }
+
+  /* Owner */
+
+  .owner-bio {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Testimonials */
+
+  .testimonial-card {
+    padding: 18px;
+  }
+
+  .graphic-img {
+    max-width: 100%;
+  }
+
+  /* Contact */
+
+  .contact-details-section {
+    padding: 50px 0;
+  }
+
+  .contact-layout {
+    gap: 22px;
+  }
+
+  .contact-info-card,
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-full {
+    grid-column: auto;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+
+  .contact-reference {
+    overflow-wrap: anywhere;
+  }
+
+  /* Footer */
+
+  .site-footer {
+    padding: 22px 15px;
+  }
+}
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 400px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Top contact bar */
+
+  .top-bar-info {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .top-bar-info span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Hero */
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  /* Navigation */
+
+  .nav-links {
+    gap: 6px 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  /* Stats */
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0;
+  }
+
+  .stat-item {
+    min-width: 0;
+    padding: 0 6px;
+  }
+
+  .stat-item h2 {
+    font-size: 1.8rem;
+  }
+
+  .stat-item p {
+    font-size: 0.68rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+    padding: 0 2px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* Services */
+
+  .solutions-section {
+    padding: 50px 0;
+  }
+
+  .solutions-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .solutions-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .btn-book {
+    padding: 12px 18px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /* Contact */
+
+  .contact-info-card,
+  .contact-form {
+    padding: 20px 16px;
+  }
+
+  .contact-heading p {
+    font-size: 0.95rem;
+  }
+}
